@@ -58,6 +58,9 @@ PRODUCT_PACKAGES += \
 
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/Googlekeyboard/overlay
 
+# Soong namespaces
+QCOM_SOONG_NAMESPACE := $(LOCAL_PATH)
+
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/Googlekeyboard/product/usr,$(TARGET_COPY_OUT_PRODUCT)/usr) \
     $(LOCAL_PATH)/Googlekeyboard/product/etc/sysconfig/google-hiddenapi-LatinIME-keyboard-whitelist.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/google-hiddenapi-LatinIME-keyboard-whitelist.xml
