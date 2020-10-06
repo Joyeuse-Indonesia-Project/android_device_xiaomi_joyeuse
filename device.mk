@@ -421,6 +421,10 @@ PRODUCT_PACKAGES += \
     libOmxVenc \
     libstagefrighthw
 
+# OTA
+PRODUCT_HOST_PACKAGES += \
+    signapk
+
 # LiveDisplay native
 PRODUCT_PACKAGES += vendor.lineage.livedisplay@2.0-service-sdm
 
