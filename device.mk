@@ -381,6 +381,24 @@ PRODUCT_PACKAGES += \
     ethertypes \
     libebtc
 
+# Lawnchair
+ifeq ($(SHIP_LAWNCHAIR),true)
+
+PRODUCT_PACKAGES += \
+    Lawnchair
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/permissions/privapp-permissions-lawnchair.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-lawnchair.xml \
+    $(LOCAL_PATH)/configs/permissions/lawnchair-hiddenapi-package-whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/lawnchair-hiddenapi-package-whitelist.xml
+
+PRODUCT_PACKAGE_OVERLAYS += \
+    $(LOCAL_PATH)/lawnchairoverlay
+
+PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
+    $(LOCAL_PATH)/lawnchairoverlay
+
+endif
+
 # Media
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/media/media_profiles_vendor.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_vendor.xml
