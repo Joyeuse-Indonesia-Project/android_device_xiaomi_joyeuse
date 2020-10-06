@@ -473,9 +473,6 @@ PRODUCT_PACKAGES += \
     qti_telephony_utils.xml \
     telephony-ext
 
-PRODUCT_BOOT_JARS += \
-    telephony-ext
-
 # IPACM
 PRODUCT_PACKAGES += \
     ipacm \
@@ -545,9 +542,6 @@ PRODUCT_PACKAGES += vendor.xiaomi.hardware.displayfeature@1.0.vendor
 PRODUCT_PACKAGES += \
     libaacwrapper \
     libnl
-    
-PRODUCT_BOOT_JARS += \
-    WfdCommon
 
 # NFC
 PRODUCT_PACKAGES += \
